@@ -1,0 +1,2 @@
+npm i -g http-server          to install http-server globally
+http-server .   to start server
