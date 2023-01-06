@@ -1,12 +1,12 @@
 :root {
     --primary: #8c38ff;
-    --light: #EEEEEE;
+    --light: #FFFFFF;
     --dark: #212121;
 }
 
 * {
     margin:0;
-    padding: 0;
+    padding:0;
     box-sizing: border-box;
     font-family: 'Fira sans', sans-serif;
 }
@@ -15,27 +15,29 @@
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
 }
 
 nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top:0;
+    left:0;
+    right:0;
     z-index: 99;
-    background-color: var(--dark);
+    background-color:var(--dark);
     padding: 16px 32px;
-    border-bottom: 3px solid var(--primary);
+    border-top: 4px solid var(--primary);
+    border-bottom:4px solid var(--primary);
 }
 
 h1 {
     color: #fff;
     font-size: 28px;
-    font-weight: 900;
+    text-transform: uppercase;
     letter-spacing: 2px;
-    text-transform: uppercase ;
+    font-weight: 600;
+
 }
 
 .hamburger {
@@ -48,7 +50,6 @@ h1 {
     outline: none;
     background: none;
     cursor: pointer;
-
 }
 
 .hamburger span {
@@ -64,58 +65,23 @@ h1 {
     transition: 0.4s;
 }
 
-.hamburger:hover span:nth-child(2) {
-    transform: translateX(10px);
-    background-color: var(--primary);
-
-
-}
-
-.hamburger.is-active span:nth-child(1) {
-    transform: translate(0px, -2px) rotate(45deg);
-}
-
-.hamburger.is-active span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(15px);
-
-}
-
-.hamburger.is-active span:nth-child(3) {
-    transform: translate(-3px, 3px) rotate(-45deg);
-}
-
-.hamburger.is-active:hover span {
-    background-color: var(--primary);
-}
-
 .menu {
-    display: none;
+    /* display: ; */
     flex: 1 1 0%;
     justify-content: flex-end;
     margin: 0px -16px;
 }
 
-.menu a {
-    color: #FFF;
-    margin: 0 16px;
-    font-weight: 600;
+.menu a{
+    color: #fff;
     text-decoration: none;
+    margin: 0 16px;
+    font-weight: 550;
     transition: 0.4s;
     padding: 8px 16px;
     border-radius: 99px;
 }
 
-.menu a.is-active, .menu a:hover {
+.menu a.is-active, a:hover {
     background-color: var(--primary);
-}
-
-@media (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-
-    .menu {
-        display:flex;
-    }
 }
